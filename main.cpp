@@ -20,11 +20,37 @@ return arreglo[pos]->valor;
 //Devuelve true si y solo si todas las letras de las cadenas de la lista son mayusculas
 bool sonMayusculas(list<string> palabras)
 {
-    /*for(int i=0; i<palabras.size();i++){
-        if(palabras.push_back()){
+    list<string>::iterator it = palabras.begin();
+
+    while(it != palabras.end()){
+
+        string pal = *it;
+
+        for (int i = 0; i <pal.length() ; ++i) {
+
+            if (pal[i]>='A' && pal[i] <= 'Z'){
+
+                continue;
+
+            }
+
+            else{
+
+                return false;
+
+            }
 
         }
-    }*/
+
+
+
+        it++;
+
+    }
+
+    return true;
+
+
 }
 
 //Devuelve un vector que contenga todos los valores del vector de parametro sin repetir ningun valor
